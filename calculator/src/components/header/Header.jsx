@@ -4,7 +4,7 @@ import {
   HeaderLogo,
   HeaderRightNav,
   StyledNavLink,
-} from './styled'
+} from './headerStyles'
 
 export const Header = () => {
   return (
