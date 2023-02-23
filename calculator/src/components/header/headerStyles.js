@@ -13,14 +13,17 @@ export const HeaderBox = styled.header`
 export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
+  width: 100%;
 `
 
 export const HeaderRightNav = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
-  width: 40%;
+  width: 30%;
 `
 
 export const HeaderLogo = styled.p`

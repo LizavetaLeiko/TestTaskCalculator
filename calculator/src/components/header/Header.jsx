@@ -13,13 +13,19 @@ export const Header = () => {
       <HeaderLogo>Calculator App</HeaderLogo>
       <HeaderRightNav>
           {/* <StyledNavLink to={}> */}
-            Home (CC)
+          <div>
+          Home (CC)
+          </div>
           {/* </StyledNavLink> */}
           {/* <StyledNavLink to={}> */}
-            Home (FC)
+          <div>
+          Home (FC)
+          </div>
           {/* </StyledNavLink> */}
           {/* <StyledNavLink to={}> */}
-            Settings
+          <div>
+          Settings
+          </div>
           {/* </StyledNavLink> */}
       </HeaderRightNav>
       </HeaderContent>
