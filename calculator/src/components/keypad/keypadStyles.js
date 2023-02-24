@@ -7,12 +7,12 @@ export const KeypadBox = styled.div`
   justify-items: center;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding: 15px;
+  padding: 30px;
 `
 
 export const KeypadButton = styled.button`
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
   cursor: pointer;
   margin: 10px;

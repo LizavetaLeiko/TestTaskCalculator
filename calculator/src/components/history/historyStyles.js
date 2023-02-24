@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HisporyBox = styled.div`
   width: 30%;
   height: 100%;
-  padding: 15px;
+  padding: 25px;
 `
 export const HisporyList = styled.ul`
   list-style: none;
@@ -16,8 +16,8 @@ export const HisporyList = styled.ul`
 export const HisporyItem = styled.li`
   list-style: none;
 `
-export const HisporyTitle = styled.p`
-  margin-bottom: 20px;
+export const HisporyTitle = styled.h2`
+  margin-bottom: 30px;
   font-size: 32px;
   font-weight: 600;
   color: #000;

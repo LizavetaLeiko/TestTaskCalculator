@@ -26,7 +26,7 @@ export const HeaderRightNav = styled.div`
   width: 30%;
 `
 
-export const HeaderLogo = styled.p`
+export const HeaderLogo = styled.h1`
   font-size: 32px;
   font-weight: 600;
   color: #fff;
