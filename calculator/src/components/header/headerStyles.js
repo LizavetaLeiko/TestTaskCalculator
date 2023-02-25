@@ -36,7 +36,7 @@ export const HeaderLogo = styled.h1`
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: #fff;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 400;
   padding: 10px;
   cursor: pointer;

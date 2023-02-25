@@ -12,21 +12,15 @@ export const Header = () => {
       <HeaderContent>
       <HeaderLogo>Calculator App</HeaderLogo>
       <HeaderRightNav>
-          {/* <StyledNavLink to={}> */}
-          <div>
+          <StyledNavLink to={'/'}>
           Home (CC)
-          </div>
-          {/* </StyledNavLink> */}
-          {/* <StyledNavLink to={}> */}
-          <div>
+          </StyledNavLink> 
+          <StyledNavLink to={'/fc'}>
           Home (FC)
-          </div>
-          {/* </StyledNavLink> */}
-          {/* <StyledNavLink to={}> */}
-          <div>
+          </StyledNavLink>
+          <StyledNavLink to={'/settings'}>
           Settings
-          </div>
-          {/* </StyledNavLink> */}
+          </StyledNavLink>
       </HeaderRightNav>
       </HeaderContent>
     </HeaderBox>

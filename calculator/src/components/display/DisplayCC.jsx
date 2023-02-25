@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import {DisplayBox, DisplayContent} from './displayStyles'
 
-export class DisplayFC extends Component {
+export class DisplayCC extends Component {
   render(){
     return(
     <DisplayBox>

@@ -1,15 +1,19 @@
-import { KeypadFC } from '../keypad/KeypadFC'
-import { HistoryFC } from '../history/HistoryFC'
-import {CalcBox} from './calculatorStyles'
+import { KeypadCC } from '../keypad/KeypadCC'
+import { HistoryCC } from '../history/HistoryCC'
+import { DisplayCC } from '../display/DisplayCC'
+import {CalcBox, CalcContent} from './calculatorStyles'
 import { Component } from 'react'
 
-export class CalculatorFC extends Component{
+export class CalculatorCC extends Component{
 
   render(){
     return(
     <CalcBox>
-      <KeypadFC/>
-      <HistoryFC/>
+      <CalcContent>
+        <DisplayCC/>
+        <KeypadCC/>
+      </CalcContent>
+      <HistoryCC/>
     </CalcBox>
   )
   }
