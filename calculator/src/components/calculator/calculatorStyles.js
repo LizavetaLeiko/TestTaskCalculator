@@ -8,7 +8,9 @@ export const CalcBox = styled.div`
   height: 100%;
   width: 70%;
   margin: 0 auto;
-  background-color: #E6E6E6;
+  background-color: ${({theme}) => theme.mane.backgroundColor};
+  color: ${({theme}) => theme.mane.color};
+  border: ${({theme}) => theme.mane.border};
 `
 export const CalcContent = styled.div`
   width: 100%;
@@ -16,5 +18,5 @@ export const CalcContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   height: 100%;
-  border-right: 1px #000 solid;
+  border-right: ${({theme}) => theme.mane.border};
 `

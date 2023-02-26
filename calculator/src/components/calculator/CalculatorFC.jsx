@@ -4,7 +4,6 @@ import { DisplayFC } from '../display/DisplayFC'
 import { ControlPanelFC } from '../controlPanel/ControlPanelFC' 
 import { CalcBox, CalcContent } from './calculatorStyles'
 
-
 export const CalculatorFC = () =>{
 
   return(

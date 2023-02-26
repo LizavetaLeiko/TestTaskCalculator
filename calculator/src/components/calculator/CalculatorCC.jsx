@@ -5,8 +5,8 @@ import { ControlPanelCC } from '../controlPanel/ControlPanelCC'
 import {CalcBox, CalcContent} from './calculatorStyles'
 import { Component } from 'react'
 
-export class CalculatorCC extends Component{
 
+export class CalculatorCC extends Component{
   render(){
     return(
     <CalcBox>

@@ -1,4 +1,4 @@
-import {DisplayBox, DisplayContent} from './displayStyles'
+import {DisplayBox, DisplayContent} from './displayStyles';
 
 export const DisplayFC = () =>{
 

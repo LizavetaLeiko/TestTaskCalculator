@@ -19,11 +19,11 @@ export const KeypadButton = styled.button`
   padding: 5px;
   text-align: center;
   border: 1px solid #000;
-  background-color: #333;
+  background-color: ${({theme}) => theme.btn.backgroundColor};
   font-size: 32px;
   font-weight: 600;
-  color: #fff;
+  color: ${({theme}) => theme.btn.color};
   &:hover {
-    background-color: #252525;
+    background-color: ${({theme}) => theme.btn.hoverColor};
   }
 `

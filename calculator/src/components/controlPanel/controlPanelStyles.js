@@ -8,6 +8,7 @@ export const ControlBox = styled.div`
   align-items: center;
 `
 export const ControlBtn = styled.button`
+  color: ${({theme}) => theme.mane.color};
   padding: 300px 5px;
   cursor: pointer;
   border: none;

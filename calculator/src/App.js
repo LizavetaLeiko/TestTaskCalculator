@@ -2,12 +2,23 @@ import { CalculatorFC } from './components/calculator/CalculatorFC';
 import { CalculatorCC } from './components/calculator/CalculatorCC';
 import { Header } from './components/header/Header';
 import { SettingsFC } from './pages/settings/SettingsFC';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
+import { useState } from "react";
+import { ThemeContext, themes } from './utils/themeContext';
+import { ThemeProvider } from 'styled-components'
 
 
 function App() {
+
+  const [theme, setTheme] = useState(themes.light);
+
+  const toggleTheme = ( event ) => {
+    setTheme(event.target.value === "light" ? themes.light : themes.dark);
+  };
+
   return (
-    <div>
+    <ThemeContext.Provider value={{ theme: theme, toggleTheme }}>
+      <ThemeProvider theme={() => theme}>
       <Header/>
       <Routes>
             <Route
@@ -23,7 +34,8 @@ function App() {
               element={<SettingsFC/>}
             />
           </Routes>
-    </div>
+          </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 
