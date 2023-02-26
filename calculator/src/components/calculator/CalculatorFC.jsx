@@ -1,6 +1,7 @@
 import { KeypadFC } from '../keypad/KeypadFC'
 import { HistoryFC } from '../history/HistoryFC'
 import { DisplayFC } from '../display/DisplayFC'
+import { ControlPanelFC } from '../controlPanel/ControlPanelFC' 
 import { CalcBox, CalcContent } from './calculatorStyles'
 
 
@@ -12,6 +13,7 @@ export const CalculatorFC = () =>{
         <DisplayFC/>
         <KeypadFC/>
       </CalcContent>
+      <ControlPanelFC/>
       <HistoryFC/>
     </CalcBox>
   )
