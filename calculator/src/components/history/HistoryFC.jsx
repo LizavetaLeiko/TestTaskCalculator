@@ -1,4 +1,4 @@
-import { HisporyBox, HisporyTitle, HisporyList, HisporyItem } from './historyStyles'
+import { HisporyBox, HisporyTitle, HisporyList, HisporyItem, Button } from './historyStyles'
 
 export const HistoryFC = () =>{
 
@@ -7,6 +7,7 @@ export const HistoryFC = () =>{
   return(
     <HisporyBox>
       <HisporyTitle>History</HisporyTitle>
+      <Button>Clear all</Button>
       <HisporyList>
         {
           history.map(item =>{

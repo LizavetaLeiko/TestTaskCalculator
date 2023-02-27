@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { HisporyBox, HisporyTitle, HisporyList, HisporyItem } from './historyStyles'
+import { HisporyBox, HisporyTitle, HisporyList, HisporyItem, Button } from './historyStyles'
 
 
 export class HistoryCC extends Component {
@@ -8,6 +8,7 @@ export class HistoryCC extends Component {
     return(
       <HisporyBox>
       <HisporyTitle>History</HisporyTitle>
+      <Button>Clear all</Button>
       <HisporyList>
         {/* {
           history.map(item =>{
