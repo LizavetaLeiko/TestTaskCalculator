@@ -5,8 +5,11 @@ export const DisplayBox = styled.div`
   width: 100%;
   border-bottom: ${({theme}) => theme.mane.border};
 `
-export const DisplayContent = styled.div`
+export const DisplayContent = styled.p`
   font-size: 42px;
   font-weight: 600;
   text-align: right;
+  min-height: 50px;
+  max-width: 695px;
+  width: 100%;
 `
