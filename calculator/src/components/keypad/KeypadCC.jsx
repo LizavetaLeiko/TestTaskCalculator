@@ -12,7 +12,7 @@ class KeypadCC extends Component {
         this.props.deleteLastSymbol(value)
         break;
       case 'C' :
-        this.props.deleteAll(value)
+        this.props.deleteExpression(value)
         break;
       case '=' :
         this.props.getResult(value)

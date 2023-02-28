@@ -55,7 +55,11 @@ const parsePlusSeparatedExpression = (expression) => {
 };
 const parse = (expression) => {
   const result = parsePlusSeparatedExpression(expression, '+');
-  return result;
+  if(Number.isInteger(result)){
+    return result
+  } else {
+    return result.toFixed(3)
+  }
 };
 
 export default parse;
