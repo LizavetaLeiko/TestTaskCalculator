@@ -5,6 +5,7 @@ import {
   HistoryList,
   HistoryItem,
   Button,
+  HistoryListContainer
 } from "./historyStyles";
 import { v4 as uuidV4 } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +14,7 @@ import { getHistoryAction } from "../../store/actions";
 export const HistoryFC = () => {
 
   const dispatch = useDispatch();
-  const historyArr = useSelector((state) => state.history);
+  const historyArr = useSelector((state) => state.history.reverse());
 
   useEffect(() =>{
     dispatch(getHistoryAction())
@@ -23,6 +24,7 @@ export const HistoryFC = () => {
     <HistoryBox>
       <HistoryTitle>History</HistoryTitle>
       <Button>Clear all</Button>
+      <HistoryListContainer>
       <HistoryList>
         {historyArr.map((item) => {
           return (
@@ -32,6 +34,7 @@ export const HistoryFC = () => {
           );
         })}
       </HistoryList>
+      </HistoryListContainer>
     </HistoryBox>
   );
 };

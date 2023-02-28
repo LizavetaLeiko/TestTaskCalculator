@@ -7,6 +7,7 @@ import {
   HistoryList,
   HistoryItem,
   Button,
+  HistoryListContainer
 } from "./historyStyles";
 import { getHistoryAction } from "../../store/actions";
 
@@ -15,14 +16,15 @@ class HistoryCC extends Component {
   componentDidMount(){
     this.props.getHistory();
   }
-  
+
   render() {
     return (
       <HistoryBox>
         <HistoryTitle>History</HistoryTitle>
         <Button>Clear all</Button>
+        <HistoryListContainer>
         <HistoryList>
-        {this.props.content.history.map((item) => {
+        {this.props.history.map((item) => {
           return (
             <HistoryItem key={uuidV4()}>
               {item.expression}={item.result}
@@ -30,13 +32,14 @@ class HistoryCC extends Component {
           );
         })}
         </HistoryList>
+        </HistoryListContainer>
       </HistoryBox>
     );
   }
 }
 const mapStateToProps = (state) => {
   return {
-    content: state,
+    history: state.history.reverse(),
   };
 };
 

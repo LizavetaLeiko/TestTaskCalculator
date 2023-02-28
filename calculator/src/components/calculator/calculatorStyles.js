@@ -6,7 +6,6 @@ export const CalcBox = styled.div`
   justify-content: center;
   align-items: flex-start;
   height: 100%;
-  width: 70%;
   margin: 0 auto;
   background-color: ${({theme}) => theme.mane.backgroundColor};
   color: ${({theme}) => theme.mane.color};

@@ -10,6 +10,4 @@ export const DisplayContent = styled.p`
   font-weight: 600;
   text-align: right;
   min-height: 50px;
-  max-width: 695px;
-  width: 100%;
 `

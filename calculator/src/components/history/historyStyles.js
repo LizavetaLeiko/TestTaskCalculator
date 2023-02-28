@@ -1,12 +1,23 @@
 import styled from 'styled-components'
 
 export const HistoryBox = styled.div`
-  width: 30%;
+  position: relative;
+  width: 40%;
+  max-height: 740px;
   height: 100%;
   padding: 30px 30px 30px 15px;
   text-align: center;
+  overflow: hidden;
+`
+
+export const HistoryListContainer = styled.div`
+  overflow: scroll;
+  position: relative;
+  max-height: 600px;
+  padding-bottom: 30px;
 `
 export const HistoryList = styled.ul`
+  height: fit-content;
   list-style: none;
   font-size: 20px;
   font-weight: 400;
