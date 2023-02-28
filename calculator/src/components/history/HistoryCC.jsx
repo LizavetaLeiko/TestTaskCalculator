@@ -10,21 +10,25 @@ import {
   HistoryListContainer
 } from "./historyStyles";
 import { getHistoryAction } from "../../store/actions";
+import { Context } from "../../utils/Context";
 
 class HistoryCC extends Component {
+
+  static contextType = Context
 
   componentDidMount(){
     this.props.getHistory();
   }
 
   render() {
+    let { historyIsOpen } = this.context;
     return (
-      <HistoryBox>
+      <HistoryBox style={historyIsOpen ? {display: "block"} : {display: "none"}}>
         <HistoryTitle>History</HistoryTitle>
         <Button>Clear all</Button>
         <HistoryListContainer>
         <HistoryList>
-        {this.props.history.map((item) => {
+        {this.props.history && this.props.history.reverse().map((item) => {
           return (
             <HistoryItem key={uuidV4()}>
               {item.expression}={item.result}
@@ -37,15 +41,16 @@ class HistoryCC extends Component {
     );
   }
 }
+
 const mapStateToProps = (state) => {
   return {
-    history: state.history.reverse(),
+    history: state.history,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getHistory: (value) => dispatch(getHistoryAction(value)),
+    getHistory: () => dispatch(getHistoryAction()),
   }
 }
 

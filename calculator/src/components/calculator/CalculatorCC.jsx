@@ -1,7 +1,7 @@
 import KeypadCC from '../keypad/KeypadCC'
 import HistoryCC from '../history/HistoryCC'
 import DisplayCC from '../display/DisplayCC'
-import { ControlPanelCC } from '../controlPanel/ControlPanelCC' 
+import ControlPanelCC from '../controlPanel/ControlPanelCC' 
 import { ErrorBoundary } from '../errorBoundary/ErrorBoundary'
 import {CalcBox, CalcContent} from './calculatorStyles'
 import { Component } from 'react'

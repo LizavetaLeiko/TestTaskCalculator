@@ -1,5 +1,3 @@
-import { createContext } from 'react'
-
 export const themes = {
   light: {
     type: "light",
@@ -28,13 +26,3 @@ export const themes = {
     },
   },
 };
-
-export const themeValues = {
-  light: 'light',
-  dark: 'dark',
-}
-
-export const ThemeContext = createContext({
-  theme: themes.light,
-  toggleTheme: () => {},
-})

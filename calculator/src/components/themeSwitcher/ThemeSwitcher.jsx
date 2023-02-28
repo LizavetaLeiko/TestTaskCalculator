@@ -1,9 +1,9 @@
 import { SwitcherSelect, SwitcherOptions, SwitcherTitle, SwitcherBox } from './themeSwitcherStyles';
-import { ThemeContext } from '../../utils/themeContext';
+import { Context } from '../../utils/Context';
 
 export const ThemeSwitcher = () =>{
   return(
-    <ThemeContext.Consumer>
+    <Context.Consumer>
       {({theme, toggleTheme}) => (
         <SwitcherBox>
         <SwitcherTitle>Theme</SwitcherTitle>
@@ -13,6 +13,6 @@ export const ThemeSwitcher = () =>{
         </SwitcherSelect>
       </SwitcherBox>
       )}
-    </ThemeContext.Consumer>
+    </Context.Consumer>
   )
 }

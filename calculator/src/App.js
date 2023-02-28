@@ -4,20 +4,27 @@ import { Header } from './components/header/Header';
 import { SettingsFC } from './pages/settings/SettingsFC';
 import { Route, Routes } from 'react-router-dom';
 import { useState } from "react";
-import { ThemeContext, themes } from './utils/themeContext';
+import { Context } from './utils/Context';
+import { themes } from './constants/themeContextValues';
 import { ThemeProvider } from 'styled-components'
 
 
 function App() {
 
   const [theme, setTheme] = useState(themes.light);
+  const [historyIsOpen, setHistotyIsOpen] = useState(true);
+
 
   const toggleTheme = ( event ) => {
     setTheme(event.target.value === "light" ? themes.light : themes.dark);
   };
 
+  const toggleHistory =  () => {
+    setHistotyIsOpen(historyIsOpen === true ? false : true);
+  };
+
   return (
-    <ThemeContext.Provider value={{ theme: theme, toggleTheme }}>
+    <Context.Provider value={{ theme: theme, toggleTheme, historyIsOpen, toggleHistory }}>
       <ThemeProvider theme={() => theme}>
       <Header/>
       <Routes>
@@ -35,7 +42,7 @@ function App() {
             />
           </Routes>
           </ThemeProvider>
-    </ThemeContext.Provider>
+    </Context.Provider>
   );
 }
 
