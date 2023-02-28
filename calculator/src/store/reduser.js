@@ -1,3 +1,4 @@
+import parse from "../utils/expressionParser"
 
 const defaultstate = {
   expression: '',
@@ -16,6 +17,8 @@ export const reduser = ( state = defaultstate, action)=>{
       return { ...state, expression: state.expression.slice(0, -1)}
     case 'deleteAll':
       return { ...state, expression: ''}
+    case 'getResult':
+      return { ...state, expression: parse(state.expression)}
     default:
       return state
   }

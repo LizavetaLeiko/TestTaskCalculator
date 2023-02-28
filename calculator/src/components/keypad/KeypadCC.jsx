@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { v4 as uuidV4 } from 'uuid'
 import buttonsValues from '../../constants/buttonsValues'
 import { KeypadButton, KeypadBox } from './keypadStyles'
-import { addSymbolAction, deleteLastSymbolAction, deleteAllAction } from '../../store/actions'
+import { addSymbolAction, deleteLastSymbolAction, deleteAllAction, getResultAction } from '../../store/actions'
 import { connect } from "react-redux";
 
 class KeypadCC extends Component {
@@ -13,6 +13,9 @@ class KeypadCC extends Component {
         break;
       case 'C' :
         this.props.deleteAll(value)
+        break;
+      case '=' :
+        this.props.getResult(value)
         break;
       default:
         this.props.addSymbol(value)
@@ -40,6 +43,7 @@ const mapDispatchToProps = (dispatch) => {
     addSymbol: (value) => dispatch(addSymbolAction(value)),
     deleteLastSymbol: (value) => dispatch(deleteLastSymbolAction(value)),
     deleteAll: (value) => dispatch(deleteAllAction(value)),
+    getResult: (value) => dispatch(getResultAction(value)),
   }
 }
 
