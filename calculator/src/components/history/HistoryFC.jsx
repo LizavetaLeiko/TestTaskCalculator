@@ -1,20 +1,29 @@
-import { HisporyBox, HisporyTitle, HisporyList, HisporyItem, Button } from './historyStyles'
-import { v4 as uuidV4 } from 'uuid'
+import {
+  HistoryBox,
+  HistoryTitle,
+  HistoryList,
+  HistoryItem,
+  Button,
+} from "./historyStyles";
+import { v4 as uuidV4 } from "uuid";
+import { useSelector } from "react-redux";
 
-export const HistoryFC = () =>{
+export const HistoryFC = () => {
+  const historyArr = useSelector((state) => state.history);
 
-  let history = ['history item 1', 'history item 2', 'history item 3', 'history item 4', 'history item 5', 'history item 6', 'history item 1', 'history item 2', 'history item 3', 'history item 4', 'history item 5', 'history item 6']
-  return(
-    <HisporyBox>
-      <HisporyTitle>History</HisporyTitle>
+  return (
+    <HistoryBox>
+      <HistoryTitle>History</HistoryTitle>
       <Button>Clear all</Button>
-      <HisporyList>
-        {
-          history.map(item =>{
-            return <HisporyItem key={uuidV4()}>{item}</HisporyItem>
-          })
-        }
-      </HisporyList>
-    </HisporyBox>
-  )
-}
+      <HistoryList>
+        {historyArr.map((item) => {
+          return (
+            <HistoryItem key={uuidV4()}>
+              {item.expression}={item.result}
+            </HistoryItem>
+          );
+        })}
+      </HistoryList>
+    </HistoryBox>
+  );
+};

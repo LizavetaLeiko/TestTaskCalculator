@@ -1,8 +1,10 @@
 import parse from "../utils/expressionParser"
+import { getHistory, setHistory } from "../utils/localStorageHelper"
 
 const defaultstate = {
   expression: '',
   result: '',
+  history: [],
 }
 
 export const reduser = ( state = defaultstate, action)=>{
@@ -16,9 +18,11 @@ export const reduser = ( state = defaultstate, action)=>{
     case 'deleteLastSymbol':
       return { ...state, expression: state.expression.slice(0, -1)}
     case 'deleteAll':
-      return { ...state, expression: ''}
+      return { ...state, expression: '', result: ''}
     case 'getResult':
-      return { ...state, expression: parse(state.expression)}
+      let result = parse(state.expression);
+      setHistory(state.expression, result)
+      return { ...state, result: result, history: getHistory()}
     default:
       return state
   }

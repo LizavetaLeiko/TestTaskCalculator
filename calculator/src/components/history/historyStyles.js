@@ -1,21 +1,21 @@
 import styled from 'styled-components'
 
-export const HisporyBox = styled.div`
+export const HistoryBox = styled.div`
   width: 30%;
   height: 100%;
   padding: 30px 30px 30px 15px;
   text-align: center;
 `
-export const HisporyList = styled.ul`
+export const HistoryList = styled.ul`
   list-style: none;
   font-size: 20px;
   font-weight: 400;
 `
 
-export const HisporyItem = styled.li`
+export const HistoryItem = styled.li`
   list-style: none;
 `
-export const HisporyTitle = styled.h2`
+export const HistoryTitle = styled.h2`
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: 600;

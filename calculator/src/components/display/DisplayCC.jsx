@@ -6,7 +6,17 @@ class DisplayCC extends Component {
   render() {
     return (
       <DisplayBox>
-        <DisplayContent>{this.props.expression}</DisplayContent>
+        <DisplayContent
+          style={
+            this.props.content.expression.length >= 25
+              ? { fontSize: "32px" }
+              : { fontSize: "42px" }
+          }
+        >
+          {this.props.content.result === ""
+            ? this.props.content.expression
+            : this.props.content.result}
+        </DisplayContent>
       </DisplayBox>
     );
   }
@@ -14,8 +24,8 @@ class DisplayCC extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    expression: state.expression
-  }
+    content: state,
+  };
 };
 
 export default connect(mapStateToProps, null)(DisplayCC);

@@ -1,22 +1,26 @@
 import { Component } from "react";
-import { HisporyBox, HisporyTitle, HisporyList, HisporyItem, Button } from './historyStyles'
-
+import {
+  HistoryBox,
+  HistoryTitle,
+  HistoryList,
+  HistoryItem,
+  Button,
+} from "./historyStyles";
 
 export class HistoryCC extends Component {
-
-  render(){
-    return(
-      <HisporyBox>
-      <HisporyTitle>History</HisporyTitle>
-      <Button>Clear all</Button>
-      <HisporyList>
-        {/* {
+  render() {
+    return (
+      <HistoryBox>
+        <HistoryTitle>History</HistoryTitle>
+        <Button>Clear all</Button>
+        <HistoryList>
+          {/* {
           history.map(item =>{
-            return <HisporyItem>{item}</HisporyItem>
+            return <HistoryItem>{item}</HistoryItem>
           })
         } */}
-      </HisporyList>
-    </HisporyBox>
-    )
+        </HistoryList>
+      </HistoryBox>
+    );
   }
 }
