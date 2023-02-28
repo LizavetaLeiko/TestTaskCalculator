@@ -1,5 +1,5 @@
 import KeypadCC from '../keypad/KeypadCC'
-import { HistoryCC } from '../history/HistoryCC'
+import HistoryCC from '../history/HistoryCC'
 import DisplayCC from '../display/DisplayCC'
 import { ControlPanelCC } from '../controlPanel/ControlPanelCC' 
 import { ErrorBoundary } from '../errorBoundary/ErrorBoundary'

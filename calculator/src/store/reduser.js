@@ -17,12 +17,14 @@ export const reduser = ( state = defaultstate, action)=>{
       }
     case 'deleteLastSymbol':
       return { ...state, expression: state.expression.slice(0, -1)}
-    case 'deleteAll':
+    case 'deleteExpression':
       return { ...state, expression: '', result: ''}
     case 'getResult':
       let result = parse(state.expression);
       setHistory(state.expression, result)
       return { ...state, result: result, history: getHistory()}
+    case 'getHistory':
+      return { ...state, history: getHistory()}
     default:
       return state
   }

@@ -1,3 +1,4 @@
+import { useEffect } from "react"; 
 import {
   HistoryBox,
   HistoryTitle,
@@ -6,10 +7,17 @@ import {
   Button,
 } from "./historyStyles";
 import { v4 as uuidV4 } from "uuid";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { getHistoryAction } from "../../store/actions";
 
 export const HistoryFC = () => {
+
+  const dispatch = useDispatch();
   const historyArr = useSelector((state) => state.history);
+
+  useEffect(() =>{
+    dispatch(getHistoryAction())
+  }, [])
 
   return (
     <HistoryBox>

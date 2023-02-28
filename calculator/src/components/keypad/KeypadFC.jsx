@@ -2,7 +2,7 @@ import { v4 as uuidV4 } from 'uuid'
 import buttonsValues from '../../constants/buttonsValues'
 import { KeypadButton, KeypadBox } from './keypadStyles'
 import { useDispatch } from 'react-redux';
-import { addSymbolAction, deleteLastSymbolAction, deleteAllAction, getResultAction } from '../../store/actions';
+import { addSymbolAction, deleteLastSymbolAction, deleteExpressionAction, getResultAction } from '../../store/actions';
 
 export const KeypadFC = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export const KeypadFC = () => {
         dispatch(deleteLastSymbolAction(value))
         break;
       case 'C' :
-        dispatch(deleteAllAction(value))
+        dispatch(deleteExpressionAction(value))
         break;
       case '=' :
         dispatch(getResultAction(value))
