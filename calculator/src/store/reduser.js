@@ -10,7 +10,9 @@ const defaultstate = {
 export const reduser = ( state = defaultstate, action)=>{
   switch(action.type){
     case 'addSymbol':
-      if (state.expression.length >= 33){
+      if(state.result){
+        return { ...state, expression: action.payload, result: ''}
+      }else if (state.expression.length >= 33){
         return {...state}
       } else{
         return { ...state, expression: state.expression + action.payload}

@@ -43,7 +43,7 @@ const parseMinusSeparatedExpression = (expression) => {
   const numbersString = split(expression, '-');
   const numbers = numbersString.map(noStr => parseDivisionSeparatedExpression(noStr));
   const initialValue = numbers[0];
-  const result = numbers.slice(1).reduce((acc, no) => acc - no, initialValue);
+  const result = numbers.slice(expression[0] === '-' ? 0 : 1).reduce((acc, no) => acc - no, initialValue);
   return result;
 };
 const parsePlusSeparatedExpression = (expression) => {
@@ -55,7 +55,9 @@ const parsePlusSeparatedExpression = (expression) => {
 };
 const parse = (expression) => {
   const result = parsePlusSeparatedExpression(expression, '+');
-  if(Number.isInteger(result)){
+  if (isNaN(result) || result === Infinity){
+    return 'not valid expression'
+  } else if(Number.isInteger(result)){
     return result
   } else {
     return result.toFixed(3)
