@@ -1,5 +1,5 @@
 import parse from "../utils/expressionParser"
-import { getHistory, setHistory } from "../utils/localStorageHelper"
+import { getHistory, setHistory, clearHistory } from "../utils/localStorageHelper"
 
 const defaultstate = {
   expression: '',
@@ -25,6 +25,10 @@ export const reduser = ( state = defaultstate, action)=>{
       return { ...state, result: result, history: getHistory()}
     case 'getHistory':
       return { ...state, history: getHistory()}
+    case 'deleteAll':
+      return { ...state, expression: '', result: '', history: clearHistory()}
+    case 'deleteHistory':
+      return { ...state, history: clearHistory()}
     default:
       return state
   }

@@ -11,13 +11,13 @@ export const KeypadFC = () => {
   const setValue = (value) =>{
     switch (value){
       case 'CE' :
-        dispatch(deleteLastSymbolAction(value))
+        dispatch(deleteLastSymbolAction())
         break;
       case 'C' :
-        dispatch(deleteExpressionAction(value))
+        dispatch(deleteExpressionAction())
         break;
       case '=' :
-        dispatch(getResultAction(value))
+        dispatch(getResultAction())
         break;
       default:
         dispatch(addSymbolAction(value))

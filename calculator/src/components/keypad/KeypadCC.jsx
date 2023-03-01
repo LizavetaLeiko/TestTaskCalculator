@@ -10,13 +10,13 @@ class KeypadCC extends Component {
   setValue = (value) => {
     switch (value) {
       case 'CE' :
-        this.props.deleteLastSymbol(value)
+        this.props.deleteLastSymbol()
         break;
       case 'C' :
-        this.props.deleteExpression(value)
+        this.props.deleteExpression()
         break;
       case '=' :
-        this.props.getResult(value)
+        this.props.getResult()
         break;
       default:
         this.props.addSymbol(value)
@@ -40,10 +40,10 @@ class KeypadCC extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addSymbol: (value) => dispatch(addSymbolAction(value)),
-    deleteLastSymbol: (value) => dispatch(deleteLastSymbolAction(value)),
-    deleteExpression: (value) => dispatch(deleteExpressionAction(value)),
-    getResult: (value) => dispatch(getResultAction(value)),
+    addSymbol: () => dispatch(addSymbolAction()),
+    deleteLastSymbol: () => dispatch(deleteLastSymbolAction()),
+    deleteExpression: () => dispatch(deleteExpressionAction()),
+    getResult: (value) => dispatch(getResultAction()),
   }
 }
 

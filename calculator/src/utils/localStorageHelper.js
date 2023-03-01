@@ -16,3 +16,8 @@ export const getHistory = () =>{
     return JSON.parse(res);
   }
 }
+
+export const clearHistory = () =>{
+  localStorage.removeItem('history')
+  return []
+}
