@@ -40,10 +40,10 @@ class KeypadCC extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addSymbol: () => dispatch(addSymbolAction()),
+    addSymbol: (value) => dispatch(addSymbolAction(value)),
     deleteLastSymbol: () => dispatch(deleteLastSymbolAction()),
     deleteExpression: () => dispatch(deleteExpressionAction()),
-    getResult: (value) => dispatch(getResultAction()),
+    getResult: () => dispatch(getResultAction()),
   }
 }
 
