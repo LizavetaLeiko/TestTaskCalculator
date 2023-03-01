@@ -1,9 +1,10 @@
 import { Component } from 'react'
 import { v4 as uuidV4 } from 'uuid'
 import buttonsValues from '../../constants/buttonsValues'
-import { KeypadButton, KeypadBox } from './keypadStyles'
+import { KeypadBox } from './keypadStyles'
 import { addSymbolAction, deleteLastSymbolAction, deleteExpressionAction, getResultAction } from '../../store/actions'
 import { connect } from "react-redux";
+import KeypadBtnCC from '../keypadBtn/KeypadBtnCC'
 
 class KeypadCC extends Component {
   setValue = (value) => {
@@ -26,12 +27,11 @@ class KeypadCC extends Component {
     return (
     <KeypadBox>
       {buttonsValues.map(item => (
-        <KeypadButton
-          onClick={() => {this.setValue(item)}}
+        <KeypadBtnCC
+          setter={this.setValue}
           key={uuidV4()}
-          >
-          {item}
-        </KeypadButton>
+          btnValue={item}
+          />
       ))}
     </KeypadBox>
   )

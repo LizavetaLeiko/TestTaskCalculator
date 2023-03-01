@@ -1,8 +1,9 @@
 import { v4 as uuidV4 } from 'uuid'
 import buttonsValues from '../../constants/buttonsValues'
-import { KeypadButton, KeypadBox } from './keypadStyles'
+import { KeypadBox } from './keypadStyles'
 import { useDispatch } from 'react-redux';
 import { addSymbolAction, deleteLastSymbolAction, deleteExpressionAction, getResultAction } from '../../store/actions';
+import KeypadBtnFC from '../keypadBtn/KeypadBtnFC';
 
 export const KeypadFC = () => {
   const dispatch = useDispatch();
@@ -26,12 +27,11 @@ export const KeypadFC = () => {
   return (
     <KeypadBox>
       {buttonsValues.map(item => (
-        <KeypadButton
-          onClick={() => {setValue(item)}}
+        <KeypadBtnFC
+          setter={setValue}
           key={uuidV4()}
-          >
-          {item}
-        </KeypadButton>
+          btnValue={item}
+          />
       ))}
     </KeypadBox>
   )
