@@ -16,17 +16,15 @@ const defaultstate = {
 export const reduser = (state = defaultstate, action) => {
   switch (action.type) {
     case "addSymbol":
-      let lastIndex = state.expression.length - 1;
       if (state.result) {
         return { ...state, expression: action.payload, result: "" };
       } else if (state.expression.length >= 33) {
         return { ...state };
-      }
-      if ( findSymbol(state.expression, symbols) && findSymbol(action.payload, symbols)) {
+      } else if ( findSymbol(state.expression, symbols) && findSymbol(action.payload, symbols)) {
         return {
           ...state,
           expression: state.expression.replace(
-            state.expression[lastIndex],
+            state.expression[state.expression.length - 1],
             action.payload
           ),
         };

@@ -7,15 +7,11 @@ export const SettingsFC = () =>{
 
   const dispatch = useDispatch();
 
-  const deleteHistory = () =>{
-    dispatch(deleteAllAction())
-  }
-
   return(
     <SettingsBox>
       <SettingsTitle>Settings</SettingsTitle>
       <ThemeSwitcher/>
-      <Button onClick={()=>{deleteHistory()}}>Clear all history</Button>
+      <Button onClick={()=>dispatch(deleteAllAction())}>Clear all history</Button>
     </SettingsBox>
   )
 }

@@ -20,16 +20,12 @@ class HistoryCC extends Component {
     this.props.getHistory();
   }
 
-  deleteAll = () =>{
-    this.props.deleteAll()
-  }
-
   render() {
     let { historyIsOpen } = this.context;
     return (
       <HistoryBox style={historyIsOpen ? {display: "block"} : {display: "none"}}>
         <HistoryTitle>History</HistoryTitle>
-        <Button onClick={() => this.deleteAll()}>Clear all</Button>
+        <Button onClick={() => this.props.deleteAll()}>Clear all</Button>
         <HistoryListContainer>
         <HistoryList>
         {this.props.history && this.props.history.reverse().map((item) => {

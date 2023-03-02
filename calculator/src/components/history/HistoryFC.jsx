@@ -21,16 +21,12 @@ export const HistoryFC = () => {
     dispatch(getHistoryAction())
   }, [dispatch])
 
-  const deleteAll = () =>{
-    dispatch(deleteAllAction())
-  }
-
   return (
     <Context.Consumer>
       {({ historyIsOpen }) => (
         <HistoryBox style={historyIsOpen ? {display: "block"} : {display: "none"}}>
         <HistoryTitle>History</HistoryTitle>
-        <Button onClick={()=> deleteAll()}>Clear all</Button>
+        <Button onClick={()=> dispatch(deleteAllAction())}>Clear all</Button>
         <HistoryListContainer>
         <HistoryList>
           {historyArr && historyArr.reverse().map((item) => {
