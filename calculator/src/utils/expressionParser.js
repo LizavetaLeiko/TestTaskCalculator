@@ -55,13 +55,14 @@ const parsePlusSeparatedExpression = (expression) => {
 };
 const parse = (expression) => {
   const result = parsePlusSeparatedExpression(expression, '+');
-  if (isNaN(result) || result === Infinity){
+  if(isNaN(result) || result === Infinity){
     return 'not valid expression'
-  } else if(Number.isInteger(result)){
+  } else if (Number.isInteger(result) || result.toString().split('.').pop().length <= 3){
     return result
-  } else {
+  } else{
     return result.toFixed(3)
   }
+  
 };
 
 export default parse;
