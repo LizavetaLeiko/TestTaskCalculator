@@ -20,5 +20,5 @@ const buttonsValues = [
   ')',
   'CE',
 ]
-
+export const symbols = ['-','+','/','*']
 export default buttonsValues;
