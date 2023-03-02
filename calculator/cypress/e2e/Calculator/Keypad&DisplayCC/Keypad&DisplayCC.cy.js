@@ -50,6 +50,34 @@ describe("Keypad and calculate test", () => {
 
   });
 
+  it("Symbol replacement is possible", () => {
+    cy.visit(url);
+
+    cy.get("button.sc-gswNZR.wcGEN")
+      .eq(12)
+      .click()
+      .get("button.sc-gswNZR.wcGEN")
+      .eq(10)
+      .click()
+      .get("p.sc-pyfCe.iCUbFs")
+      .should("have.text", "2+")
+      .get("button.sc-gswNZR.wcGEN")
+      .eq(5)
+      .click()
+      .get("p.sc-pyfCe.iCUbFs")
+      .should("have.text", "2-")
+      .get("button.sc-gswNZR.wcGEN")
+      .eq(4)
+      .click()
+      .get("p.sc-pyfCe.iCUbFs")
+      .should("have.text", "2*")
+      .get("button.sc-gswNZR.wcGEN")
+      .eq(9)
+      .click()
+      .get("p.sc-pyfCe.iCUbFs")
+      .should("have.text", "2/");
+  });
+  
   it("Addiction operation is possible", () => {
     cy.visit(url);
 
@@ -68,6 +96,8 @@ describe("Keypad and calculate test", () => {
       .get("p.sc-pyfCe.iCUbFs")
       .should("have.text", "2");
   });
+
+  
 
   it("Subtraction operation is possible", () => {
     cy.visit(url);

@@ -8,13 +8,13 @@ describe("Change theme test", () => {
     cy.get("select")
       .select(0)
       .should("have.value", "light")
-      .get("div.sc-dmctIk.REqGG")
+      .get("div.sc-hHTYSt ")
       .should("have.css", "background-color", "rgb(235, 235, 235)");
 
     cy.get("select")
       .select(1)
       .should("have.value", "dark")
-      .get("div.sc-dmctIk.kFuHTo")
+      .get("div.sc-hHTYSt ")
       .should("have.css", "background-color", "rgb(51, 51, 51)");
   });
 });
