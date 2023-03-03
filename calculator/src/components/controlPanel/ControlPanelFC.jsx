@@ -1,5 +1,5 @@
 import { ControlBox, ControlBtn } from './controlPanelStyles'
-import { Context } from '../../utils/Context';
+import { Context } from '@utils/Context';
 
 export const ControlPanelFC =() =>{
   return(

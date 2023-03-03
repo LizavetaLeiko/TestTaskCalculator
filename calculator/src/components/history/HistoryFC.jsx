@@ -9,8 +9,8 @@ import {
 } from "./historyStyles";
 import { v4 as uuidV4 } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
-import { getHistoryAction, deleteAllAction } from "../../store/actions";
-import { Context } from '../../utils/Context';
+import { getHistoryAction, deleteAllAction } from "@store/actions";
+import { Context } from '@utils/Context';
 
 export const HistoryFC = () => {
 

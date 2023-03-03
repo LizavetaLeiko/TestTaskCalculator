@@ -1,7 +1,7 @@
-import { ThemeSwitcher } from '../../components/themeSwitcher/ThemeSwitcher'
+import { ThemeSwitcher } from '@components/themeSwitcher/ThemeSwitcher'
 import { SettingsBox, SettingsTitle, Button } from './settingsStyles'
 import { useDispatch } from "react-redux";
-import { deleteAllAction } from '../../store/actions';
+import { deleteAllAction } from '@store/actions';
 
 export const SettingsFC = () =>{
 

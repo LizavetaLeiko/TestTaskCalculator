@@ -1,10 +1,10 @@
 import { Component } from 'react'
 import { v4 as uuidV4 } from 'uuid'
-import buttonsValues from '../../constants/buttonsValues'
+import buttonsValues from '@constants/buttonsValues'
 import { KeypadBox } from './keypadStyles'
-import { addSymbolAction, deleteLastSymbolAction, deleteExpressionAction, getResultAction } from '../../store/actions'
+import { addSymbolAction, deleteLastSymbolAction, deleteExpressionAction, getResultAction } from '@store/actions'
 import { connect } from "react-redux";
-import KeypadBtnCC from '../keypadBtn/KeypadBtnCC'
+import KeypadBtnCC from '@components/keypadBtn/KeypadBtnCC'
 
 class KeypadCC extends Component {
   setValue = (value) => {

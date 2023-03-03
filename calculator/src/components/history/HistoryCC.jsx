@@ -9,8 +9,8 @@ import {
   Button,
   HistoryListContainer
 } from "./historyStyles";
-import { getHistoryAction, deleteAllAction } from "../../store/actions";
-import { Context } from "../../utils/Context";
+import { getHistoryAction, deleteAllAction } from "@store/actions";
+import { Context } from "@utils/Context";
 
 class HistoryCC extends Component {
 

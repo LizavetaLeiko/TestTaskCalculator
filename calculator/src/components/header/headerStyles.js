@@ -30,7 +30,6 @@ export const HeaderLogo = styled.h1`
   font-size: 32px;
   font-weight: 600;
   color: #fff;
-  cursor: pointer;
 `
 
 export const StyledNavLink = styled(NavLink)`

@@ -20,13 +20,15 @@ export const reduser = (state = defaultstate, action) => {
         return { ...state, expression: action.payload, result: "" };
       } else if (state.expression.length >= 33) {
         return { ...state };
-      } else if ( findSymbol(state.expression, symbols) && findSymbol(action.payload, symbols)) {
+      } else if (
+        findSymbol(state.expression, symbols) &&
+        findSymbol(action.payload, symbols)
+      ) {
         return {
           ...state,
-          expression: state.expression.replace(
-            state.expression[state.expression.length - 1],
-            action.payload
-          ),
+          expression:
+            state.expression.slice(0, state.expression.length - 1) +
+            action.payload,
         };
       } else {
         return { ...state, expression: state.expression + action.payload };

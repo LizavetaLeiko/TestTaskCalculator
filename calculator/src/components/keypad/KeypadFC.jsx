@@ -1,9 +1,9 @@
 import { v4 as uuidV4 } from 'uuid'
-import buttonsValues from '../../constants/buttonsValues'
+import buttonsValues from '@constants/buttonsValues'
 import { KeypadBox } from './keypadStyles'
 import { useDispatch } from 'react-redux';
-import { addSymbolAction, deleteLastSymbolAction, deleteExpressionAction, getResultAction } from '../../store/actions';
-import KeypadBtnFC from '../keypadBtn/KeypadBtnFC';
+import { addSymbolAction, deleteLastSymbolAction, deleteExpressionAction, getResultAction } from '@store/actions';
+import KeypadBtnFC from '@components/keypadBtn/KeypadBtnFC';
 
 export const KeypadFC = () => {
   const dispatch = useDispatch();

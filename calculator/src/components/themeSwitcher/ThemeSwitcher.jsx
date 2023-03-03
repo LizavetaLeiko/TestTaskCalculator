@@ -1,5 +1,5 @@
 import { SwitcherSelect, SwitcherOptions, SwitcherTitle, SwitcherBox } from './themeSwitcherStyles';
-import { Context } from '../../utils/Context';
+import { Context } from '@utils/Context';
 
 export const ThemeSwitcher = () =>{
   return(

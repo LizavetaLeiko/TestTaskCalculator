@@ -1,11 +1,11 @@
-import { CalculatorFC } from "./components/calculator/CalculatorFC";
-import { CalculatorCC } from "./components/calculator/CalculatorCC";
-import { Header } from "./components/header/Header";
-import { SettingsFC } from "./pages/settings/SettingsFC";
+import { CalculatorFC } from "@components/calculator/CalculatorFC";
+import { CalculatorCC } from "@components/calculator/CalculatorCC";
+import { Header } from "@components/header/Header";
+import { SettingsFC } from "@pages/settings/SettingsFC";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import { Context } from "./utils/Context";
-import { themes } from "./constants/themeContextValues";
+import { Context } from "@utils/Context";
+import { themes } from "@constants/themeContextValues";
 import { ThemeProvider } from "styled-components";
 import { ErrorBoundary } from "./components/errorBoundary/ErrorBoundary";
 

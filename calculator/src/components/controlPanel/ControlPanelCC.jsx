@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Context } from '../../utils/Context';
+import { Context } from '@utils/Context';
 import { ControlBox, ControlBtn } from './controlPanelStyles'
 
 class ControlPanelCC extends Component{
