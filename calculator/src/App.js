@@ -25,7 +25,7 @@ function App() {
     <Context.Provider
       value={{ theme: theme, toggleTheme, historyIsOpen, toggleHistory }}
     >
-      <ThemeProvider theme={() => theme}>
+      <ThemeProvider theme={() => theme} historyIsOpen={() => historyIsOpen}>
         <ErrorBoundary>
           <Header />
           <Routes>

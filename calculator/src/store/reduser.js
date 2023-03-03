@@ -18,7 +18,7 @@ export const reduser = (state = defaultstate, action) => {
     case "addSymbol":
       if (state.result) {
         return { ...state, expression: action.payload, result: "" };
-      } else if (state.expression.length >= 33) {
+      } else if (state.expression.length >= 18) {
         return { ...state };
       } else if (
         findSymbol(state.expression, symbols) &&

@@ -5,8 +5,8 @@ export const ControlPanelFC =() =>{
   return(
     <Context.Consumer>
       {({historyIsOpen, toggleHistory}) => (
-        <ControlBox>
-          <ControlBtn onClick={toggleHistory}>{historyIsOpen ? 'ᐅ' : 'ᐊ'}</ControlBtn>
+        <ControlBox onClick={toggleHistory}>
+          <ControlBtn>{historyIsOpen ? 'ᐅ' : 'ᐊ'}</ControlBtn>
         </ControlBox>
       )}
     </Context.Consumer>

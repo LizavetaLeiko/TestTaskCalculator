@@ -6,13 +6,7 @@ export const DisplayFC = () => {
 
   return (
     <DisplayBox>
-      <DisplayContent
-        style={
-          content.expression.length >= 25
-            ? { fontSize: "32px" }
-            : { fontSize: "42px" }
-        }
-      >
+      <DisplayContent>
         {content.result === "" ? content.expression : content.result}
       </DisplayContent>
     </DisplayBox>

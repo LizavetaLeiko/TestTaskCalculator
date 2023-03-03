@@ -6,13 +6,7 @@ class DisplayCC extends Component {
   render() {
     return (
       <DisplayBox>
-        <DisplayContent
-          style={
-            this.props.content.expression.length >= 25
-              ? { fontSize: "32px" }
-              : { fontSize: "42px" }
-          }
-        >
+        <DisplayContent>
           {this.props.content.result === ""
             ? this.props.content.expression
             : this.props.content.result}

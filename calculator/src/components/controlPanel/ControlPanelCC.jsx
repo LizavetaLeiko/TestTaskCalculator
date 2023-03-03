@@ -9,8 +9,8 @@ class ControlPanelCC extends Component{
   render(){
     let {historyIsOpen, toggleHistory} = this.context;
     return(
-      <ControlBox>
-        <ControlBtn onClick={()=>toggleHistory()}>{historyIsOpen ? 'ᐅ' : 'ᐊ'}</ControlBtn>
+      <ControlBox onClick={()=>toggleHistory()}>
+        <ControlBtn>{historyIsOpen ? 'ᐅ' : 'ᐊ'}</ControlBtn>
       </ControlBox>
     )
   }

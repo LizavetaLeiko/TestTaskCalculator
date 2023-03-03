@@ -10,6 +10,9 @@ export const CalcBox = styled.div`
   background-color: ${({theme}) => theme.mane.backgroundColor};
   color: ${({theme}) => theme.mane.color};
   border: ${({theme}) => theme.mane.border};
+  @media (max-width: 850px) {
+    flex-direction: column;
+  }
 `
 export const CalcContent = styled.div`
   width: 100%;
